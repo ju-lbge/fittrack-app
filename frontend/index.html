@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitTrack — Authentification</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="auth-bg-overlay"></div>
+
+    <main class="auth-container">
+       
+        <header class="brand-header">
+            <span class="brand-accent"></span>
+            <h1 class="brand-name">FITTRACK</h1>
+        </header>
+
+        <div id="auth-alert" class="alert hidden"></div>
+
+        <!-- VUE CONNEXION -->
+        <section id="login-view" class="auth-card">
+            <h2 class="auth-title">CONNEXION</h2>
+            <p class="auth-subtitle">Reprenez votre entraînement là où vous l'avez laissé.</p>
+
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">EMAIL</label>
+                    <input type="email" id="login-email" name="email" placeholder="vous@exemple.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="login-password">MOT DE PASSE</label>
+                    <input type="password" id="login-password" name="password" placeholder="••••••••••••" required>
+                </div>
+
+                <button type="submit" class="btn-primary">SE CONNECTER</button>
+            </form>
+
+            <p class="auth-switch">
+                Pas encore de compte ? <a href="#" id="show-register">Créer un compte</a>
+            </p>
+        </section>
+
+        <!-- VUE INSCRIPTION -->
+        <section id="register-view" class="auth-card hidden">
+            <h2 class="auth-title">INSCRIPTION</h2>
+            <p class="auth-subtitle">Créez votre compte et commencez à suivre vos performances.</p>
+
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-firstname">PRÉNOM</label>
+                    <input type="text" id="register-firstname" name="username" placeholder="Justine" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="register-email">EMAIL</label>
+                    <input type="email" id="register-email" name="email" placeholder="vous@exemple.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="register-password">MOT DE PASSE (8 CARACTÈRES MIN.)</label>
+                    <input type="password" id="register-password" name="password" placeholder="••••••••••••" minlength="8" required>
+                </div>
+
+                <button type="submit" class="btn-primary">CREER MON COMPTE</button>
+            </form>
+
+            <p class="auth-switch">
+                Déjà un compte ? <a href="#" id="show-login">Se connecter</a>
+            </p>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
